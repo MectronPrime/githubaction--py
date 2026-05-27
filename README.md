@@ -2,12 +2,13 @@ Implementing a GitOps-style CI/CD pipeline using a Declarative Jenkinsfile, comp
 
 step-by-step breakdown to build a professional, multi-stage Jenkins pipeline.
 
-    We are going to build a pipeline for a containerized application. The goal is to enforce security gates and quality checks before anything touches production.
+We are going to build a pipeline for a containerized application. The goal is to enforce security gates and quality checks before anything touches production.
 
     [Source Code] -> [Security Scan] -> [Build & Containerize] -> [Push to Registry] -> [Deploy & Notify]
 
 
     Step 1: Set Up Shared Libraries (The Expert Move)
+    
 In an enterprise environment, repeating the same code across 50 different microservices is a nightmare. Human engineers use Jenkins Shared Libraries to keep things DRY (Don't Repeat Yourself).
 
 Create a separate Git repository named jenkins-shared-library.
@@ -124,7 +125,7 @@ Create a Jenkinsfile in the root of your application repository. This script use
     Step 3: Configuring the Engine in Jenkins UI
 
 
-    You need to configure Jenkins to handle this cleanly without choking.
+You need to configure Jenkins to handle this cleanly without choking.
 
 
     1.Inject Secrets Safely:
